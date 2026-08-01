@@ -1,0 +1,222 @@
+* {
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+body {
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:Georgia, serif;
+
+    color:white;
+
+}
+
+
+
+.credits-page {
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    background-image:url("media/image2.jpg");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-color:black;
+
+    animation:slowZoom 20s ease-in-out infinite alternate;
+
+}
+
+
+
+
+
+/* cinematic dark movie effect */
+
+.cinematic-overlay {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.75)
+    );
+
+    z-index:1;
+
+}
+
+
+
+/* scrolling credits */
+
+.credits-container {
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    animation:creditsRoll 45s linear infinite;
+
+}
+
+
+
+.credits-container h1 {
+
+
+    font-size:2.5rem;
+
+
+    margin-bottom:45px;
+
+
+    text-shadow:
+
+    0 0 20px rgba(255,255,255,0.8);
+
+
+}
+
+
+
+.credits-container h2 {
+
+
+    color:#ff8fb5;
+
+
+    margin:40px 0 20px;
+
+
+    font-size:2rem;
+
+
+}
+
+
+
+.credits-container h3 {
+
+
+    color:#ffd1df;
+
+
+    font-size:1.6rem;
+
+
+    margin:20px;
+
+
+}
+
+
+
+.credits-container p {
+
+
+    font-size:1.2rem;
+
+
+    line-height:2;
+
+
+    margin:25px;
+
+
+}
+
+
+
+
+@keyframes creditsRoll {
+
+
+from {
+
+    transform:translateY(100vh);
+
+}
+
+
+to {
+
+    transform:translateY(-140vh);
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.credits-container h1 {
+
+    font-size:2rem;
+
+}
+
+
+.credits-container h2 {
+
+    font-size:1.5rem;
+
+}
+
+
+.credits-container h3 {
+
+    font-size:1.3rem;
+
+}
+
+
+.credits-container p {
+
+    font-size:1rem;
+
+}
+
+
+}
